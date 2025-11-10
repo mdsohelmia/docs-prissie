@@ -1,48 +1,308 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Product Documentation & Developer Hub",
+  "description": "Comprehensive documentation for Vidinfra, the ultimate video infrastructure solution. Explore guides, API references, and tutorials to seamlessly integrate and manage your video content with ease.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#029C69",
+    "light": "#029C69",
+    "dark": "#029C69"
+  },
+  "banner": {
+    "content": "🚀 New: Check out our revamped Vidinfra documentation with enhanced guides and API references!"
+  },
+  "interaction": {
+    "drilldown": true
   },
   "favicon": "/favicon.svg",
+  "api": {
+    "playground": {
+      "display": "interactive"
+    },
+    "examples": {
+      "languages": [
+        "curl",
+        "python",
+        "javascript",
+        "go",
+        "ruby",
+        "java",
+        "csharp",
+        "php"
+      ],
+      "defaults": "required",
+      "prefill": true
+    }
+  },
   "navigation": {
     "tabs": [
       {
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Home",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "index"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Account & Organization",
+            "expanded": false,
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              {
+                "group": "Account",
+                "expanded": false,
+                "icon": "user",
+                "pages": [
+                  "docs/account/index",
+                  "docs/account/profile",
+                  "docs/account/sign-in",
+                  "docs/account/security",
+                  "docs/account/two-factor-authentication",
+                  "docs/account/sign-out"
+                ]
+              },
+              {
+                "group": "Organization",
+                "expanded": false,
+                "icon": "users",
+                "pages": [
+                  "docs/organization/index",
+                  "docs/organization/members",
+                  "docs/organization/roles-permissions",
+                  "docs/organization/invitations",
+                  "docs/organization/audit-logs"
+                ]
+              },
+              {
+                "group": "API Keys & Access",
+                "expanded": false,
+                "icon": "shield",
+                "pages": [
+                  "docs/access/api-keys",
+                  "docs/access/token-management",
+                  "docs/access/scopes-and-permissions"
+                ]
+              },
+              {
+                "group": "Billing",
+                "expanded": false,
+                "icon": "credit-card",
+                "pages": [
+                  "docs/billing/overview",
+                  "docs/billing/invoices",
+                  "docs/billing/payment-methods",
+                  "docs/billing/usage",
+                  "docs/billing/plan-upgrade"
+                ]
+              },
+              {
+                "group": "Settings",
+                "expanded": false,
+                "icon": "cog",
+                "pages": [
+                  "docs/settings/general",
+                  "docs/settings/notifications",
+                  "docs/settings/region-preferences"
+                ]
+              }
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Vidinfra",
+            "expanded": false,
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              {
+                "group": "Getting Started",
+                "expanded": false,
+                "icon": "rocket",
+                "pages": [
+                  "docs/vidinfra/index",
+                  "docs/vidinfra/quickstart",
+                  "docs/vidinfra/publish-first-video",
+                  "docs/vidinfra/video-faqs"
+                ]
+              },
+              {
+                "group": "Manage Library",
+                "expanded": false,
+                "icon": "database",
+                "pages": [
+                  "docs/vidinfra/manage-library/overview",
+                  "docs/vidinfra/manage-library/library-settings",
+                  "docs/vidinfra/manage-library/analytics"
+                ]
+              },
+              {
+                "group": "Manage Videos",
+                "expanded": false,
+                "icon": "video",
+                "pages": [
+                  "docs/vidinfra/manage-videos/upload-videos",
+                  "docs/vidinfra/manage-videos/video-settings",
+                  "docs/vidinfra/manage-videos/video-analytics"
+                ]
+              },
+              {
+                "group": "Player Customization",
+                "expanded": false,
+                "icon": "palette",
+                "pages": [
+                  "docs/vidinfra/player-customization/player-themes",
+                  "docs/vidinfra/player-customization/custom-overlays",
+                  "docs/vidinfra/player-customization/interactive-elements"
+                ]
+              },
+              {
+                "group": "Transcoding & DRM",
+                "expanded": false,
+                "icon": "film",
+                "pages": [
+                  "docs/vidinfra/transcoding-drm/adaptive-bitrate-streaming",
+                  "docs/vidinfra/transcoding-drm/drm-integration"
+                ]
+              },
+              {
+                "group": "Security",
+                "expanded": false,
+                "icon": "shield-check",
+                "pages": [
+                  "docs/vidinfra/security/signed-urls",
+                  "docs/vidinfra/security/restricted-access"
+                ]
+              },
+              {
+                "group": "Webhooks",
+                "expanded": false,
+                "icon": "webhook",
+                "pages": [
+                  "docs/vidinfra/webhooks/setup-webhooks",
+                  "docs/vidinfra/webhooks/webhook-events",
+                  "docs/vidinfra/webhooks/webhook-logs"
+                ]
+              }
             ]
           },
           {
-            "group": "AI tools",
+            "group": "CDN",
+            "expanded": false,
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              {
+                "group": "Getting Started",
+                "expanded": false,
+                "icon": "rocket",
+                "pages": [
+                  "docs/cdn/index",
+                  "docs/cdn/create-distribution",
+                  "docs/cdn/manage-distributions",
+                  "docs/cdn/overview"
+                ]
+              },
+              {
+                "group": "Distributions",
+                "expanded": false,
+                "icon": "rocket",
+                "pages": [
+                  "docs/cdn/distributions/distribution-overview",
+                  "docs/cdn/distributions/origins",
+                  "docs/cdn/distributions/headers",
+                  "docs/cdn/distributions/access-rules",
+                  "docs/cdn/distributions/cache-rules",
+                  "docs/cdn/distributions/image-optimizer"
+                ]
+              },
+              {
+                "group": "Analytics",
+                "expanded": false,
+                "icon": "rocket",
+                "pages": [
+                  "docs/cdn/analytics/overview",
+                  "docs/cdn/analytics/traffic-reports",
+                  "docs/cdn/analytics/cache-hit-ratio",
+                  "docs/cdn/analytics/regional-performance"
+                ]
+              },
+              {
+                "group": "Purge",
+                "expanded": false,
+                "icon": "trash",
+                "pages": [
+                  "docs/cdn/purge/purge-by-url",
+                  "docs/cdn/purge/purge-all",
+                  "docs/cdn/purge/api-purge"
+                ]
+              },
+              {
+                "group": "Certificate",
+                "expanded": false,
+                "icon": "shield",
+                "pages": [
+                  "docs/cdn/certificates/ssl-overview",
+                  "docs/cdn/certificates/custom-certificates",
+                  "docs/cdn/certificates/lets-encrypt"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "Cloud",
+            "expanded": false,
+            "icon": "cloud",
+            "pages": [
+              {
+                "group": "Getting Started",
+                "expanded": false,
+                "icon": "rocket",
+                "pages": [
+                  "docs/cloud/index",
+                  "docs/cloud/quickstart",
+                  "docs/cloud/create-instance",
+                  "docs/cloud/account-setup"
+                ]
+              },
+              {
+                "group": "Compute",
+                "expanded": false,
+                "icon": "server",
+                "pages": [
+                  "docs/cloud/compute/cloud-vm",
+                  "docs/cloud/compute/load-balancers",
+                  "docs/cloud/compute/vpc",
+                  "docs/cloud/compute/snapshots"
+                ]
+              },
+              {
+                "group": "Storage",
+                "expanded": false,
+                "icon": "database",
+                "pages": [
+                  "docs/cloud/storage/block-storage",
+                  "docs/cloud/storage/object-storage",
+                  "docs/cloud/storage/backup",
+                  "docs/cloud/storage/mount-storage"
+                ]
+              },
+              {
+                "group": "Networking & Security",
+                "expanded": false,
+                "icon": "shield",
+                "pages": [
+                  "docs/cloud/networking/firewall",
+                  "docs/cloud/networking/security-groups",
+                  "docs/cloud/networking/ssl-certificates",
+                  "docs/cloud/networking/access-control"
+                ]
+              },
+              {
+                "group": "Monitoring & Analytics",
+                "expanded": false,
+                "icon": "chart-bar",
+                "pages": [
+                  "docs/cloud/monitoring/metrics",
+                  "docs/cloud/monitoring/logs",
+                  "docs/cloud/monitoring/alerts"
+                ]
+              }
             ]
           }
         ]
@@ -53,7 +313,7 @@
           {
             "group": "API documentation",
             "pages": [
-              "api-reference/introduction"
+              "api-reference/overview"
             ]
           },
           {
@@ -69,54 +329,51 @@
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
+      "anchors": []
     }
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://beta.tenbyte.io"
+  },
+  "background": {
+    "decoration": "grid",
+    "color": {
+      "dark": "#FD5B20",
+      "light": "#FD5B20"
+    }
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@tenbyte.io"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://console.tenbyte.io"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/tenbyte",
+      "github": "https://github.com/vidinfra",
+      "linkedin": "https://linkedin.com/company/tenbyte"
     }
   }
 }

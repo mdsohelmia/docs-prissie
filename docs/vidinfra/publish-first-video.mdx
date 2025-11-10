@@ -1,0 +1,34 @@
+---
+title: 'Publish Your First Video'
+description: 'Upload, process, and publish your first video with Vidinfra using the dashboard or API.'
+icon: 'video'
+---
+
+# Publish Your First Video
+
+With Vidinfra, you can go from raw video to global streaming in minutes — no infrastructure or video expertise required.
+
+This guide walks you through publishing your first video using either the **Vidinfra Dashboard** or the **Vidinfra API**.
+
+---
+
+## 🚀 Step 1: Upload Your Video
+
+### Option 1 — Upload via Dashboard
+
+1. Go to the **Vidinfra Console** → **Assets** → **Upload Video**
+2. Drag and drop your video file, or click to browse
+3. Vidinfra begins processing the file immediately — transcoding it into multiple renditions and adaptive formats (HLS + DASH)
+
+> ✅ Supported formats: `.mp4`, `.mov`, `.mkv`, `.webm`, `.avi`, `.flv`
+
+### Option 2 — Upload via API
+
+```bash
+curl -X POST https://api.vidinfra.io/v1/assets \
+  -H "Authorization: Bearer $VIDINFRA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "input": "https://example.com/videos/product-demo.mp4",
+    "playbackPolicy": "public"
+  }'

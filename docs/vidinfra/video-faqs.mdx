@@ -1,0 +1,41 @@
+---
+title: 'Video FAQs'
+description: 'Common questions about uploading, transcoding, playback, security, and CDN delivery in Vidinfra.'
+icon: 'zap'
+---
+
+# Video FAQs
+
+Find answers to the most common questions about using **Vidinfra** for video upload, processing, and delivery.
+
+---
+
+## 📦 Uploading & Importing
+
+### 1. What video formats does Vidinfra support?
+
+Vidinfra supports most major formats including `.mp4`, `.mov`, `.mkv`, `.avi`, `.flv`, and `.webm`.
+We recommend using **MP4 (H.264)** for best compatibility and upload performance.
+
+---
+
+### 2. Is there a file size limit for uploads?
+
+No hard limit — Vidinfra supports **large uploads (100GB+)** using multipart and resumable uploads via the API.
+For optimal performance, use the official SDK or upload through cloud storage (S3, GCS) imports.
+
+---
+
+### 3. Can I import videos from YouTube, Vimeo, or cloud storage?
+
+Yes. You can **import videos from any public or signed URL**, including:
+- Vimeo or YouTube video links
+- S3 / Google Cloud Storage / Azure Blob URLs
+- Any HTTPS-accessible file
+
+Vidinfra fetches and processes the file automatically once you submit the `input` URL.
+
+```bash
+curl -X POST https://api.vidinfra.io/v1/assets \
+  -H "Authorization: Bearer $VIDINFRA_API_KEY" \
+  -d '{ "input": "https://example.com/video.mp4" }'

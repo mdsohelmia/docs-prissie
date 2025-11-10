@@ -1,0 +1,85 @@
+---
+title: 'API Overview'
+description: 'Everything you need to start using the Tenbyte API — authentication, requests, responses, limits, errors, webhooks, and SDKs.'
+icon: 'code'
+---
+
+# Tenbyte API Overview
+
+The **Tenbyte API** provides a single, developer-friendly interface to manage **Cloud**, **CDN**, **Vidinfra**, and **Image Optimization** services.
+You can use it to automate infrastructure, media pipelines, and delivery with predictable, REST-based endpoints.
+
+---
+
+## 🌍 Base URL
+
+All API requests use the same base URL:
+
+```bash
+https://api.tenbyte.io/v1/
+```
+
+Each service has its own subpath:
+| Service | Base Path | Example |
+|----------|------------|----------|
+| **CDN** | `/cdn` | `https://api.tenbyte.io/v1/cdn/distributions` |
+| **Vidinfra** | `/vidinfra` | `https://api.tenbyte.io/v1/vidinfra/videos` |
+| **Cloud** | `/cloud` | `https://api.tenbyte.io/v1/cloud/instances` |
+
+
+## 🔐 Authentication
+
+Tenbyte APIs use **Bearer Token Authentication** to authorize requests.
+Every API call must include an `Authorization` header containing your API key.
+
+You can generate and manage API keys in your **Tenbyte Console → Organization → API Keys**.
+
+---
+
+### 🪪 Example Authorization Header
+
+```bash
+-H "Authorization: Bearer YOUR_API_KEY"
+```
+```bash
+curl -X GET https://api.tenbyte.io/v1/cdn/distributions \
+  -H "Authorization: Bearer sk_live_1234567890abcdef"
+```
+
+### 🧱 Authentication Errors
+
+| HTTP Code | Error | Description |
+|------------|--------|-------------|
+| **401** | `unauthorized` | API key is missing, expired, or invalid. |
+| **403** | `forbidden` | The provided API key does not have access to the requested resource. |
+| **429** | `rate_limited` | Too many requests have been sent with this key. Wait before retrying. |
+
+---
+
+### ⚠️ Important
+
+> - **Never expose your API keys** in public repositories, client-side code, or browser environments.
+> - Always **store API keys securely** using environment variables or your platform’s secret manager.
+> - **Rotate keys periodically** and immediately revoke compromised keys.
+> - If you need multiple environments (e.g., staging, production), create **separate API keys** for each.
+> - Monitor key activity in the **Tenbyte Console → API Logs** to detect unauthorized usage.
+
+
+## 🧩 Pagination
+
+Tenbyte API responses for list endpoints are **paginated** to help manage large data sets efficiently.
+
+Use query parameters to control the number of items per page and navigate between pages.
+
+| Parameter | Description | Example |
+|------------|-------------|----------|
+| `limit` | Number of results per page | `?limit=20` |
+| `page` | Page number to retrieve | `?page=2` |
+
+---
+
+### 🧠 Example Request
+
+```bash
+GET https://api.tenbyte.io/v1/libraries?limit=20&page=1 \
+  -H "Authorization: Bearer $TENBYTE_API_KEY"
