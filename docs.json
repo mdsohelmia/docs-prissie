@@ -11,6 +11,9 @@
   "banner": {
     "content": "🚀 New: Check out our revamped Vidinfra documentation with enhanced guides and API references!"
   },
+  "appearance": {
+    "default": "dark"
+  },
   "interaction": {
     "drilldown": true
   },
