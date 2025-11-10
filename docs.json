@@ -14,6 +14,9 @@
   "interaction": {
     "drilldown": true
   },
+  "icons": {
+    "library": "lucide"
+  },
   "favicon": "/favicon.svg",
   "api": {
     "playground": {
@@ -47,6 +50,7 @@
           },
           {
             "group": "Account & Organization",
+            "icon": "user-check",
             "expanded": false,
             "pages": [
               {
@@ -110,6 +114,7 @@
           },
           {
             "group": "Vidinfra",
+            "icon": "video",
             "expanded": false,
             "pages": [
               {
@@ -186,6 +191,7 @@
           {
             "group": "CDN",
             "expanded": false,
+            "icon": "globe",
             "pages": [
               {
                 "group": "Getting Started",
@@ -201,7 +207,7 @@
               {
                 "group": "Distributions",
                 "expanded": false,
-                "icon": "rocket",
+                "icon": "globe",
                 "pages": [
                   "docs/cdn/distributions/distribution-overview",
                   "docs/cdn/distributions/origins",
@@ -214,7 +220,7 @@
               {
                 "group": "Analytics",
                 "expanded": false,
-                "icon": "rocket",
+                "icon": "chart-no-axes-column-increasing",
                 "pages": [
                   "docs/cdn/analytics/overview",
                   "docs/cdn/analytics/traffic-reports",
