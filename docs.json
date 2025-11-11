@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "willow",
   "name": "Product Documentation & Developer Hub",
   "description": "Comprehensive documentation for Vidinfra, the ultimate video infrastructure solution. Explore guides, API references, and tutorials to seamlessly integrate and manage your video content with ease.",
   "colors": {
@@ -9,7 +9,8 @@
     "dark": "#029C69"
   },
   "banner": {
-    "content": "🚀 New: Check out our revamped Vidinfra documentation with enhanced guides and API references!"
+    "content": "🚀 Version 2.0 is now live! See our [changelog](/changelog) for details.",
+    "dismissible": true
   },
   "appearance": {
     "default": "dark"

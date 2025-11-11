@@ -2,6 +2,8 @@
 title: 'Developer Hub'
 description: 'Welcome to the Tenbyte Developer Hub — your gateway to building with CDN, Vidinfra, Image Optimization, Livestream, and Cloud services.'
 icon: 'code'
+sidebarTitle: 'Welcome'
+mode: "wide"
 ---
 
 # 👋 Welcome to the Tenbyte Developer Hub
@@ -110,3 +112,63 @@ Get started with our most popular workflows:
 
 > 💡 **Tenbyte gives developers the power of hyperscale infrastructure — simplified.**
 > Build, scale, and deliver your content globally with confidence.
+<Card title="Card title" icon="text" href="/components/columns">
+  This is how you use a card with an icon and a link. Clicking on this card
+  brings you to the Columns page.
+</Card>
+
+<Accordion title="I am an Accordion.">
+  You can put any content in here, including other components, like code:
+
+   ```java HelloWorld.java
+    class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+  ```
+</Accordion>
+
+<Check>This brings us a checked status</Check>
+
+<CodeGroup>
+
+```javascript helloWorld.js
+console.log("Hello World");
+```
+
+```python hello_world.py
+print('Hello World!')
+```
+
+```java HelloWorld.java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+```
+
+</CodeGroup>
+
+<Columns cols={2}>
+  <Card title="Get started">
+    Set up your project with our quickstart guide.
+  </Card>
+  <Card title="API reference">
+    Explore endpoints, parameters, and examples for your API.
+  </Card>
+</Columns>
+
+<Frame caption="Caption text">
+  <img src="https://beta.tenbyte.io/_next/image?url=https%3A%2F%2Fasset.vidinfracdn.com%2FDashhboard-1.png&w=3840&q=75" alt="Descriptive alt text" />
+</Frame>
+
+
+<Icon icon="a-arrow-down" size={32} />
+
+<Tooltip tip="Application Programming Interface: a set of protocols for software applications to communicate." cta="Read our API guide" href="/api-reference">API</Tooltip> documentation helps developers understand how to integrate with your service.
+
+<Update label="2024-10-11" description="v0.1.0" tags={["Mintlify"]}>
+  This is an update with a label, description, and tag.
+</Update>
