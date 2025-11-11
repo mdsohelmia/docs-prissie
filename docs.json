@@ -326,22 +326,18 @@
             ]
           },
           {
-            "group": "CDN API",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
+            "group": "CDN",
+            "openapi": {
+              "source": "https://petstore3.swagger.io/api/v3/openapi.json",
+              "directory": "api-reference"
+            }
           },
           {
-            "group": "Vidinfra API",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
+            "group": "Vidinfra",
+            "openapi": {
+              "source": "https://raw.githubusercontent.com/github/rest-api-description/main/descriptions/api.github.com/api.github.com.json",
+              "directory": "api-reference"
+            }
           }
         ]
       }
