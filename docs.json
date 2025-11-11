@@ -326,7 +326,16 @@
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "CDN API",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          },
+          {
+            "group": "Vidinfra API",
             "pages": [
               "api-reference/endpoint/get",
               "api-reference/endpoint/create",
