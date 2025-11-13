@@ -148,8 +148,7 @@
                 "icon": "video",
                 "pages": [
                   "docs/vidinfra/manage-videos/upload-videos",
-                  "docs/vidinfra/manage-videos/video-settings",
-                  "docs/vidinfra/manage-videos/video-analytics"
+                  "docs/vidinfra/manage-videos/video-settings"
                 ]
               },
               {
