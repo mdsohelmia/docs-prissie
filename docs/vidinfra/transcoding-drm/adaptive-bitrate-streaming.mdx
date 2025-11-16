@@ -4,6 +4,7 @@ description: 'Deliver videos in multiple qualities so playback automatically adj
 sidebarTitle: 'Adaptive Bitrate'
 icon: 'podcast'
 ---
+
 # Adaptive Bitrate Streaming (`HLS` + `DASH`)
 
 Adaptive Bitrate Streaming (ABR) ensures that every viewer receives the best possible video quality based on their current network conditions. Instead of serving a single fixed-quality file, Vidinfra generates multiple resolutions during transcoding and delivers them through **`HLS`** and **`DASH`**. This gives smoother playback, fewer stalls, and better performance on any device and network.
@@ -32,7 +33,9 @@ Enter a unique name to identify this transcoding preset.
 ### Preset Description
 Add a short description that explains what the preset is optimized for. 
 
-### 2. ABR in Vidinfra
+---
+
+## 2. ABR in Vidinfra
 When Adaptive Bitrate (**`HLS`** + **`DASH`**) is selected in the transcoding profile:
 
 - Vidinfra creates multiple output resolutions (e.g., **`240p`**, **`360p`**, **`480p`**, **`720p`**, **`1080p`**).
@@ -51,7 +54,7 @@ ABR in Vidinfra uses:
 
 These formats allow the player to request segments of different qualities in real time based on available bandwidth.
 
-#### Video Codec
+### Video Codec
 A video codec compresses a video into a smaller file for storage and streaming, then decompresses it during playback so the viewer can watch it smoothly.
 
     <Frame caption="Video Codec Configuration">
@@ -64,7 +67,7 @@ A video codec compresses a video into a smaller file for storage and streaming, 
 2. `H.265` (HEVC)
 `H.265` provides higher compression efficiency compared to H.264, meaning it can deliver similar quality at a smaller file size.
 
-#### Video Output Resolution
+### Video Output Resolution
 Vidinfra lets you choose the set of resolutions generated during transcoding. 
 
     <Frame caption="Video Output Resolution">
@@ -81,7 +84,7 @@ Available output options include:
 6. **1440p (QHD 2560 × 1440)**: Quad HD quality that offers sharper detail than 1080p. 
 7. **2160p (UHD 3840 × 2160)**: Ultra HD resolution designed for premium viewing. 
 
-#### Per-Title Encoding
+### Per-Title Encoding
 It analyzes each video and adjusts the bitrate ladder, so that every resolution uses the lowest possible bitrate without losing quality.
 
     <Frame caption="Per Title Encoding">
@@ -89,3 +92,5 @@ It analyzes each video and adjusts the bitrate ladder, so that every resolution 
     </Frame>
 
 <Note>Per-Title Encoding is not ABR, but it fine-tunes the quality and bitrate of each ABR resolution to deliver the best visual result at a smaller file size.</Note>
+
+---
