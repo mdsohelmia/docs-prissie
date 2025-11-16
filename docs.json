@@ -199,8 +199,8 @@
                 "pages": [
                   "docs/cdn/index",
                   "docs/cdn/create-distribution",
-                  "docs/cdn/manage-distributions",
-                  "docs/cdn/overview"
+                  "docs/cdn/manage-distributions"
+                  
                 ]
               },
               {
