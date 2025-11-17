@@ -65,8 +65,7 @@
                   "docs/account/index",
                   "docs/account/account-creation",
                   "docs/account/profile-settings",
-                  "docs/account/password-configuration",
-                  "docs/account/user-access"
+                  "docs/account/session-management"
                 ]
               },
               {
