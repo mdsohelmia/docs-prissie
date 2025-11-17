@@ -63,11 +63,9 @@
                 "icon": "user",
                 "pages": [
                   "docs/account/index",
-                  "docs/account/profile",
-                  "docs/account/sign-in",
-                  "docs/account/security",
-                  "docs/account/two-factor-authentication",
-                  "docs/account/sign-out"
+                  "docs/account/account-creation",
+                  "docs/account/profile-settings",
+                  "docs/account/session-management"
                 ]
               },
               {
@@ -200,8 +198,8 @@
                 "pages": [
                   "docs/cdn/index",
                   "docs/cdn/create-distribution",
-                  "docs/cdn/manage-distributions",
-                  "docs/cdn/overview"
+                  "docs/cdn/manage-distributions"
+                  
                 ]
               },
               {
