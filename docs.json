@@ -238,9 +238,7 @@
                 "icon": "server",
                 "pages": [
                   "docs/cloud/compute/cloud-vm",
-                  "docs/cloud/compute/load-balancers",
-                  "docs/cloud/compute/vpc",
-                  "docs/cloud/compute/snapshots"
+                  "docs/cloud/compute/load-balancers"
                 ]
               },
               {
@@ -251,7 +249,7 @@
                   "docs/cloud/storage/block-storage",
                   "docs/cloud/storage/object-storage",
                   "docs/cloud/storage/backup",
-                  "docs/cloud/storage/mount-storage"
+                  "docs/cloud/storage/snapshots"
                 ]
               },
               {
@@ -259,10 +257,11 @@
                 "expanded": false,
                 "icon": "shield",
                 "pages": [
+                  "docs/cloud/networking/vpc",
                   "docs/cloud/networking/firewall",
-                  "docs/cloud/networking/security-groups",
-                  "docs/cloud/networking/ssl-certificates",
-                  "docs/cloud/networking/access-control"
+                  "docs/cloud/networking/security-groups"
+
+
                 ]
               },
               {
